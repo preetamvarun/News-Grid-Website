@@ -57,3 +57,51 @@
     margin-left : 6rem;
     padding : 1rem 0rem;
 }
+
+
+/* Styling article div  */
+
+.article-div{
+    height : 300px;
+    background : url('./image_resources/featured.jpg') no-repeat center center/cover;
+    overflow:hidden;
+}
+
+.article-div .article-content{
+    height : 100%;
+    background: rgba(0,0,0,0.6);
+    color : white;
+    padding : 2rem 7rem;
+}
+
+.article-div .article-content #sports{
+    display : inline-block;
+    color : white;
+    text-decoration : none;
+    padding : 0.4rem 0.6rem;
+    background-color : orange;
+    border-radius : 1rem;
+    margin : 0.6rem 0rem;
+}
+
+.article-div .article-content h2{
+    text-transform : uppercase;
+    font-weight: bold;
+    margin-bottom : 0.8rem;
+}
+
+.article-div .article-content p{
+    line-height : 1.6rem;
+    margin-bottom : 0.6rem;
+    max-width : 60%;
+    font-size : 1rem;
+}
+
+.article-div .article-content #readmore{
+    display: inline-block;
+    text-decoration : none;
+    color : white;
+    padding : 0.8rem 1rem;
+    background-color : var(--reddish-bck);
+    margin-bottom : 1.2rem;
+}
