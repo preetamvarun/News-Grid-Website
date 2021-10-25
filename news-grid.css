@@ -1,0 +1,59 @@
+/* Resetting base values for the site  */
+*{
+    margin : 0rem;
+    padding : 0rem;
+    box-sizing : border-box;
+}
+
+:root{
+    --icon-color : gray;
+    --reddish-bck : #BD2B2A;
+    --on-hover-color : #f4f4f4;
+}
+
+/* Styling header part of the website  */
+
+.header-part{
+    display : grid;
+    grid-template-columns: 3fr 1fr 1fr;
+    align-items : center;
+}
+
+.news-icon h1{
+    display : inline-block;
+    position : absolute;
+}
+
+.news-icon img{
+    height : 2.5rem;
+}
+
+.social-icons i{
+    font-size : 2rem;
+    color : var(--icon-color);
+    padding: 0rem 0.3rem;
+}
+
+.links-div a{
+    display: inline-block;
+    text-decoration : none;
+    padding : 0.9rem 0.6rem;
+}
+
+.links-div #home{
+    background-color : var(--reddish-bck);
+    color : white;
+}
+
+.links-div #about{
+    color : black;
+}
+
+#about:hover{
+    background-color: var(--on-hover-color);
+}
+
+.news-icon{
+    margin-left : 6rem;
+    padding : 1rem 0rem;
+}
