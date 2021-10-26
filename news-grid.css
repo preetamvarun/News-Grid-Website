@@ -88,11 +88,11 @@ body{
     color : white;
     background-color : var(--sports-link-color);
     padding : 0 0.4rem;
-    padding-top : 0.4rem;
-    padding-bottom : 0.6rem;
-    font-size: 13px;
+    padding-top : 0.3rem;
+    padding-bottom : 0.5rem;
+    font-size: 12px;
     border-radius: 1rem;
-    margin-bottom : 0.5rem;
+    margin-bottom : 0.3rem;
 }
 
 .article-div .article-content h2{
@@ -121,9 +121,10 @@ body{
 
 .editor-picks{
     background-color : var(--editor-picks-bck-color);
+    padding-bottom : 1.5rem;
 }
 
-.editor-picks .layer-1, .editor-picks .layer-3{
+.editor-picks .layer-1, .editor-picks .layer-3, .editor-picks .layer-2{
     display : grid;
     grid-template-columns: 2fr 1fr;
     max-width : 980px;
@@ -138,6 +139,34 @@ body{
 
 #container-1,#container-2{
     height : 220px;
+}
+
+.layer-2{
+    grid-template-columns: repeat(3,1fr) !important;
+    height : 25rem;
+    margin : 1.7rem 0rem;
+}
+
+.layer-2 .l2c{
+    padding : 0.5rem;
+}
+
+.layer-2 .l2c .l2c2-content{
+    padding-bottom : 0.6rem;
+}
+
+.layer-2 .l2c img{
+    display: inline-block;
+    height : 200px;
+    margin-bottom : 0.6rem;
+}
+
+.layer-2 .l2c h3{
+    padding-bottom : 0.5rem;
+}
+
+.layer-2 .l2c a{
+    background-color: var(--tech-class-bck-color);
 }
 
 #container-1{
@@ -166,3 +195,15 @@ body{
     padding-bottom: 0.45rem;
     font-size : 12px;
 }
+
+/* Styling last section of the site  */
+.join .inner-join{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.join .inner-join .join-section-1 img{
+    display: inline-block;
+    height : 2.2rem;
+}
+
