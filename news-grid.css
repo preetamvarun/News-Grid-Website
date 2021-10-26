@@ -12,8 +12,7 @@
     --editor-picks-bck-color : #f3f3f3;
     --sports-link-color : #F99500;
     --tech-class-bck-color : #009CFF;
-    --ent-class-bck-color : #A66BBE;
-    
+    --ent-class-bck-color : #A66BBE;   
 }
 
 body{
@@ -133,8 +132,8 @@ body{
 }
 
 .editor-picks .layer-3{
-    grid-template-columns: 1fr 2fr !important;
-    margin-top : 1.5rem;
+    grid-template-columns: 1fr 2fr;
+    margin-top : 1.3rem;
 }
 
 #container-1,#container-2{
@@ -153,9 +152,13 @@ body{
     padding : 1rem;
 }
 
-#container-1 img{
+.vr-class,.camera-class{
     height : 210px;
     padding : 0.8rem;
+}
+
+.camera-class{
+    padding : 0.2rem !important;
 }
 
 .ent-class{
