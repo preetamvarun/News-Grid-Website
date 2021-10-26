@@ -126,10 +126,10 @@ body{
     padding-bottom : 1.5rem;
 }
 
-.editor-picks .layer-1, .editor-picks .layer-3, .editor-picks .layer-2{
+.editor-picks .layer-1, .editor-picks .layer-2, .editor-picks .layer-3{
     display : grid;
     grid-template-columns: 2fr 1fr;
-    max-width : 980px;
+    max-width : 1000px;
     margin : auto;
     grid-gap: 1rem;
 }
@@ -143,10 +143,9 @@ body{
     height : 220px;
 }
 
-.layer-2{
-    grid-template-columns: repeat(3,1fr) !important;
+.editor-picks .layer-2{
+    grid-template-columns: repeat(3,1fr);
     height : 25rem;
-    margin : 1.7rem 0rem;
 }
 
 .layer-2 .l2c{
@@ -209,10 +208,10 @@ body{
 }
 
 .join .inner-join{
-    max-width : 980px; 
+    max-width : 1000px; 
     margin : auto;
     display: grid;
-    grid-template-columns: 1.4fr 1.2fr 0.8fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding : 0.8rem 0rem;
 }
 
