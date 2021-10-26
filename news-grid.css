@@ -9,6 +9,15 @@
     --icon-color : gray;
     --reddish-bck : #BD2B2A;
     --on-hover-color : #f4f4f4;
+    --editor-picks-bck-color : #f3f3f3;
+    --sports-link-color : #F99500;
+    --tech-class-bck-color : #009CFF;
+    --ent-class-bck-color : #A66BBE;
+    
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 /* Styling header part of the website  */
@@ -62,26 +71,29 @@
 /* Styling article div  */
 
 .article-div{
-    height : 300px;
+    height : 320px;
     background : url('./image_resources/featured.jpg') no-repeat center center/cover;
     overflow:hidden;
 }
 
 .article-div .article-content{
     height : 100%;
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.65);
     color : white;
     padding : 2rem 7rem;
 }
 
-.article-div .article-content #sports{
-    display : inline-block;
-    color : white;
+.sports-class, .ent-class{
+    display: inline-block;
     text-decoration : none;
-    padding : 0.4rem 0.6rem;
-    background-color : orange;
-    border-radius : 1rem;
-    margin : 0.6rem 0rem;
+    color : white;
+    background-color : var(--sports-link-color);
+    padding : 0 0.4rem;
+    padding-top : 0.4rem;
+    padding-bottom : 0.6rem;
+    font-size: 13px;
+    border-radius: 1rem;
+    margin-bottom : 0.5rem;
 }
 
 .article-div .article-content h2{
@@ -92,7 +104,7 @@
 
 .article-div .article-content p{
     line-height : 1.6rem;
-    margin-bottom : 0.6rem;
+    margin-bottom : 1rem;
     max-width : 60%;
     font-size : 1rem;
 }
@@ -101,7 +113,53 @@
     display: inline-block;
     text-decoration : none;
     color : white;
-    padding : 0.8rem 1rem;
+    padding : 0.7rem 1.1rem;
     background-color : var(--reddish-bck);
     margin-bottom : 1.2rem;
+}
+
+/* styling editor picks section  */
+
+.editor-picks{
+    background-color : var(--editor-picks-bck-color);
+}
+
+.editor-picks .layer-1, .editor-picks .layer-3{
+    display : grid;
+    grid-template-columns: 2fr 1fr;
+    max-width : 980px;
+    margin : auto;
+    grid-gap: 1rem;
+}
+
+.editor-picks .layer-3{
+    grid-template-columns: 1fr 2fr !important;
+    margin-top : 1.5rem;
+}
+
+#container-1,#container-2{
+    height : 220px;
+}
+
+#container-1{
+    background-color: white;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    align-items : center;
+}
+
+#container-2{
+    background-color : #333;
+    padding : 1rem;
+}
+
+#container-1 img{
+    height : 210px;
+    padding : 0.8rem;
+}
+
+.ent-class{
+    background-color : var(--ent-class-bck-color);
+    padding-bottom: 0.45rem;
+    font-size : 12px;
 }
