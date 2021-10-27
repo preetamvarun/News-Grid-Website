@@ -19,30 +19,23 @@
     --join-club-bck-color : #F99500;
 }
 
-body{
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 /* Styling header part of the website  */
 
 .header-part{
     display : grid;
-    grid-template-columns: 3fr 1fr 1fr;
+    grid-template-columns: 2.5fr 1fr 1fr;
     align-items : center;
     position: sticky;
     top: 0;
     background-color: white;
 }
 
-.news-icon h1{
-    display : inline-block;
-    position : absolute;
-}
-
-.news-icon img {height : 2.5rem;}
+.news-icon img {height : 35px;}
 
 .social-icons i{
-    font-size : 2rem;
+    font-size : 1.8rem;
     color : var(--icon-color);
     padding: 0rem 0.3rem;
 }
@@ -66,6 +59,35 @@ body{
     padding : 1rem 0rem;
 }
 
+/* Styling header part for tables and mobile screens  */
+
+@media (max-width : 768px){
+    .social-icons{
+        display : none;
+    }
+    .header-part{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .news-icon{
+        margin-left : 0rem;
+    }
+    .links-div a{
+        padding : 0.6rem;
+    }
+    .links-div{
+        margin-bottom : 0.35rem;
+    }
+    
+}
+
+
+/* Styling header part of mobile devices  */
+
+@media (max-width : 500px){
+
+}
 
 /* Styling article div  */
 
