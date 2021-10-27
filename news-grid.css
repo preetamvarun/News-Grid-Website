@@ -49,15 +49,15 @@ body{
     display: inline-block;
     text-decoration : none;
     padding : 0.9rem 0.6rem;
+    color : black;
 }
 
-.links-div #home{
+.links-div .current{
     background-color : var(--reddish-bck);
     color : white;
 }
 
-.links-div #about {color : black;}
-#about:hover {background-color: var(--on-hover-color);}
+.links-div a:hover {background-color: var(--on-hover-color); color : black;}
 
 .news-icon{
     margin-left : 6rem;
@@ -298,6 +298,4 @@ body{
     color : white;
     border : none;
 }
-
-
 
