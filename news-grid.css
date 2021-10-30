@@ -19,6 +19,7 @@
     --block-div-bck-color : #EEEEEE;
     --join-club-bck-color : #F99500;
     --joinNow-button-color : #E58B05;
+    --listItem-border-bottom-color : #555;
 }
 
 body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
@@ -36,7 +37,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 .news-icon img {height : 2.2rem;}
 
-.social-icons i{
+.header-part .social-icons i{
     font-size : 1.8rem;
     color : var(--icon-color);
     padding: 0rem 0.3rem;
@@ -258,8 +259,10 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
         flex-direction: column;
     }
 }
+/* End Styling Editor Picks Section */
 
-/* Styling last section of the index page  */
+
+/* Styling last section of the page  */
 
 .join{
     background-color: var(--last-section-bck);
@@ -296,6 +299,10 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     color : white;
 }
 
+.join .inner-join .email-section button:hover{
+    cursor: pointer;
+}
+
 .join .inner-join .email-section input{
     width : 85%; 
     height: 2.1rem; 
@@ -303,14 +310,21 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 }
 
 .join .inner-join .email-section h3 {margin-bottom : 0.4rem;}
-.join .inner-join .site-links {padding : 0.6rem;}
-.join .inner-join .site-links h4 {margin-bottom : 0.7rem;}
+.join .inner-join .site-links h4 {padding : 0.3rem 0rem;}
 .join .inner-join .site-links ul {list-style: none;}
 
 .join .inner-join .site-links ul li{
-    margin-bottom : 0.5rem;
-    padding-bottom : 0.4rem;
-    border-bottom: 0.1px dotted grey;
+    padding : 0.5rem 0rem;
+    border-bottom: 1px dotted var(--listItem-border-bottom-color);
+}
+
+.join .inner-join .site-links ul li a:hover{
+    color : var(--reddish-bck);
+}
+
+.join .inner-join .site-links ul li a{
+    text-decoration: none;
+    color : white;
 }
 
 .join .inner-join .site-links ul li:last-child {border-bottom : none}
@@ -324,6 +338,10 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     border : none;
     height : 2.5rem;
     width : 7.5rem;
+}
+
+.join .inner-join .join-section button:hover{
+    cursor: pointer;
 }
 
 .join .footer-section{
@@ -352,6 +370,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     }
 }
 
+/* End styling last section of the page  */
 
 /* Styling about section of the webpage  */
 
@@ -393,6 +412,10 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     border : none;
 }
 
+.join-club button:hover{
+    cursor: pointer;
+}
+
 /*Making about section of the reponsive on all devices*/
 @media (max-width : 500px){
     .about-org{
@@ -400,6 +423,9 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
         flex-direction: column;
     }
 }
+
+/* End styling about section of the page  */
+
 
 /* Styling current article page  */
 
@@ -469,3 +495,5 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
         flex-direction: column;
     }
 }
+
+/* End styling current article page  */
