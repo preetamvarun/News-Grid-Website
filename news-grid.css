@@ -252,7 +252,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     font-size : 0.8rem;
 }
 
-/* Making last section of index page responsive on mobile devices  */
+/* Make last section of index page responsive on mobile devices and some tablet devices */
 @media (max-width : 600px){
     .join .inner-join{
         display: flex;
@@ -316,7 +316,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     }
 }
 
-/* Styling readmore html page  */
+/* Styling current article page  */
 
 .current-article{
     max-width: 1000px;
@@ -327,14 +327,16 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     grid-gap : 1rem;
 }
 
+
 .current-article .div-1{
     background-color : white;
     grid-row: 1/ span 3;
     padding : 1rem;
+    overflow : auto;
 }
 
-.current-article img{
-    height : 430px;
+.current-article .div-1 img{
+    width : 100%;
 }
 
 .current-article .div-1 .block-div{
@@ -351,6 +353,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 .current-article .list-part{
     background-color : white;
     padding : 1rem;
+    max-width: 100%;
 }
 
 .current-article .list-part ul{
@@ -370,4 +373,12 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 .current-article .join-club{
     background-color : var(--join-club-bck-color);
+}
+
+/*Make current article page responsive*/
+@media (max-width : 500px){
+    .current-article{
+        display: flex;
+        flex-direction: column;
+    }
 }
