@@ -62,24 +62,15 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 /* Styling header part for tables and mobile screens  */
 
 @media (max-width : 768px){
-    .social-icons{
-        display : none;
-    }
+    .social-icons {display : none;}
     .header-part{
         display: flex;
         flex-direction: column;
         justify-content: center;
     }
-    .news-icon{
-        margin-left : 0rem;
-    }
-    .links-div a{
-        padding : 0.6rem;
-    }
-    .links-div{
-        margin-bottom : 0.35rem;
-    }
-    
+    .news-icon {margin-left : 0rem;}
+    .links-div a {padding : 0.6rem;}
+    .links-div {margin-bottom : 0.35rem;}
 }
 
 /* Styling article div  */
@@ -132,61 +123,48 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 /* styling editor picks section  */
 
+
+/* Setting up basic styling for editor picks section */
+
 .editor-picks{
     background-color : var(--editor-picks-bck-color);
     padding-bottom : 1.5rem;
 }
 
-.editor-picks .layer-1, .editor-picks .layer-2, .editor-picks .layer-3{
-    display : grid;
-    grid-template-columns: 2fr 1fr;
+.editor-picks .overall-layer h2 {padding : 0.5rem;} 
+
+.editor-picks .overall-layer{   
     max-width : 1000px;
     margin : auto;
-    grid-gap: 1rem;
+    background-color: red;
 }
 
-.editor-picks .layer-3{
-    grid-template-columns: 1fr 2fr;
-    margin-top : 1.3rem;
+.editor-picks .layer-1, .editor-picks .layer-2, .editor-picks .layer-3{
+    display : grid;
+    padding : 1rem;
+    grid-gap : 0.5rem;
 }
 
-#container-1,#container-2 {height : 220px;}
+.editor-picks .layer-1 {grid-template-columns: 2fr 1fr;}
+.editor-picks .layer-2 {grid-template-columns: repeat(3,1fr);}
+.editor-picks .layer-3 {grid-template-columns: 1fr 2fr;}
 
-.editor-picks .layer-2{
-    grid-template-columns: repeat(3,1fr);
-    height : 25rem;
+/* Now style layer-1  */
+
+.editor-picks .layer2Containers{
+    background-color : white;
+    padding : 0.5rem;
 }
 
-.layer-2 .l2c {padding : 0.5rem;}
-.layer-2 .l2c .l2c2-content {padding-bottom : 0.6rem;}
+.layer-2 .layer2Containers .l2c2-content {padding-bottom : 0.6rem;}
 
-.layer-2 .l2c img{
-    display: inline-block;
-    height : 200px;
+.layer-2 .layer2Containers img{
+    max-width : 300px;
     margin-bottom : 0.6rem;
 }
 
-.layer-2 .l2c h3 {padding-bottom : 0.5rem;}
-.layer-2 .l2c a {background-color: var(--tech-class-bck-color);}
-
-#container-1{
-    background-color: white;
-    display:grid;
-    grid-template-columns: 1fr 1fr;
-    align-items : center;
-}
-
-#container-2{
-    background-color : #333;
-    padding : 1rem;
-}
-
-.vr-class,.camera-class{
-    height : 210px;
-    padding : 0.8rem;
-}
-
-.camera-class {padding : 0.2rem !important;}
+.layer-2 .layer2Containers h3 {padding-bottom : 0.5rem;}
+.layer-2 .layer2Containers a {background-color: var(--tech-class-bck-color);}
 
 .ent-class{
     background-color : var(--ent-class-bck-color);
@@ -194,13 +172,13 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     font-size : 0.7rem;
 }
 
+
 /* Styling last section of the index page  */
 
 
 .join{
     background-color: var(--last-section-bck);
     color : #fff; 
-    height: 18rem;
     font-size : 0.9rem;
 }
 
@@ -226,8 +204,8 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 .join .inner-join .email-section {padding: 0.6rem;}
 
 .join .inner-join .email-section button{
-    width : 85%; 
-    height : 1.9rem; 
+    height : 2rem; 
+    width: 85%;
     border: none;
     background-color : var(--reddish-bck);
     color : white;
@@ -275,8 +253,18 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 }
 
 /* Making last section of index page responsive on mobile devices  */
-@media (max-width : 500px){
-
+@media (max-width : 600px){
+    .join .inner-join{
+        display: flex;
+        flex-direction: column;
+    }
+    .join .inner-join .email-section input{
+        width : 100%; 
+        margin : 0.4rem 0rem;
+    }
+    .join .inner-join .email-section button{
+        width : 100%;
+    }
 }
 
 
@@ -319,6 +307,16 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     color : white;
     border : none;
 }
+
+/*Making about section of the reponsive on all devices*/
+@media (max-width : 500px){
+    .about-org{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Styling readmore html page  */
 
 .current-article{
     max-width: 1000px;
