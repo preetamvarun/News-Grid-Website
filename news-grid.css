@@ -289,7 +289,7 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     margin-bottom: 0.6rem;
 }
 
-.join .inner-join .email-section {padding: 0.6rem;}
+.join .inner-join .email-section,.join .inner-join .site-links {padding: 0.6rem;}
 
 .join .inner-join .email-section button{
     height : 2rem; 
