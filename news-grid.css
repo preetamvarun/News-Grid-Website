@@ -10,10 +10,11 @@
     --reddish-bck : #BD2B2A;
     --on-hover-color : #f4f4f4;
     --editor-picks-bck-color : #f3f3f3;
-    --sports-link-color : #F99500;
-    --tech-class-bck-color : #009CFF;
-    --ent-class-bck-color : #A66BBE;   
+    --sports-bck-color : #F99500;
+    --tech-bck-color : #009CFF;
+    --ent-bck-color : #A66BBE;   
     --last-section-bck : #333333;
+    --grid-13-content-bck : #333333;
     --footer-color : #444444;
     --block-div-bck-color : #EEEEEE;
     --join-club-bck-color : #F99500;
@@ -86,11 +87,15 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     padding : 3.5rem 5rem;
 }
 
-.sports-class, .ent-class{
+
+.ent-class {background-color: var(--ent-bck-color);}
+.sports-class {background-color: var(--sports-bck-color);}
+.tech-class {background-color: var(--tech-bck-color);}
+
+.sports-class, .ent-class, .tech-class{
     display: inline-block;
     text-decoration : none;
     color : white;
-    background-color : var(--sports-link-color);
     padding : 0 0.4rem;
     padding-top : 0.3rem;
     padding-bottom : 0.5rem;
@@ -98,6 +103,8 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
     border-radius: 1rem;
     margin-bottom : 0.3rem;
 }
+
+
 
 .article-div .article-content h2{
     text-transform : uppercase;
@@ -123,58 +130,86 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 
 /* styling editor picks section  */
 
-
-/* Setting up basic styling for editor picks section */
-
-.editor-picks{
-    background-color : var(--editor-picks-bck-color);
-    padding-bottom : 1.5rem;
-}
-
-.editor-picks .overall-layer h2 {padding : 0.5rem;} 
-
-.editor-picks .overall-layer{   
+.overall-editor-picks-section{
     max-width : 1000px;
     margin : auto;
-    background-color: red;
+    overflow: auto;
 }
 
-.editor-picks .layer-1, .editor-picks .layer-2, .editor-picks .layer-3{
-    display : grid;
-    padding : 1rem;
-    grid-gap : 0.5rem;
+.overall-editor-picks-section .section-13-grid,
+.overall-editor-picks-section .section-31-grid
+{
+    display: grid;
+    grid-gap : 0.8rem;
+    background-color: white;
 }
 
-.editor-picks .layer-1 {grid-template-columns: 2fr 1fr;}
-.editor-picks .layer-2 {grid-template-columns: repeat(3,1fr);}
-.editor-picks .layer-3 {grid-template-columns: 1fr 2fr;}
-
-/* Now style layer-1  */
-
-.editor-picks .layer2Containers{
-    background-color : white;
-    padding : 0.5rem;
+.overall-editor-picks-section .section-13-grid{
+    grid-template-columns: 4fr 2fr;
+    margin-bottom : 0.4rem;
 }
 
-.layer-2 .layer2Containers .l2c2-content {padding-bottom : 0.6rem;}
-
-.layer-2 .layer2Containers img{
-    max-width : 300px;
-    margin-bottom : 0.6rem;
+.overall-editor-picks-section .section-31-grid{
+    grid-template-columns: 2fr 4fr;
 }
 
-.layer-2 .layer2Containers h3 {padding-bottom : 0.5rem;}
-.layer-2 .layer2Containers a {background-color: var(--tech-class-bck-color);}
+/* making section-13-grid and section-31-grid responsive on mobile devices  */
 
-.ent-class{
-    background-color : var(--ent-class-bck-color);
-    padding-bottom: 0.35rem;
-    font-size : 0.7rem;
+@media (max-width : 500px){
+    .overall-editor-picks-section .section-13-grid,
+    .overall-editor-picks-section .section-31-grid
+    {
+        display: flex;
+        flex-direction: column;
+    }
 }
+
+.overall-editor-picks-section .section-13-grid .img-div,
+.overall-editor-picks-section .section-31-grid .img-div
+{
+    display: flex;
+    align-items: center;
+}
+
+.overall-editor-picks-section .section-13-grid .img-div .content-div-inside-img-div,
+.overall-editor-picks-section .section-31-grid .img-div .content-div-inside-img-div
+{
+    margin-right : 0.4rem;
+}
+
+.overall-editor-picks-section .section-13-grid .content-div,
+.overall-editor-picks-section .section-31-grid .content-div
+{
+    padding : 0.6rem;
+    color : white;
+}
+
+.overall-editor-picks-section .section-13-grid .content-div {background-color: var(--grid-13-content-bck);}
+.overall-editor-picks-section .section-31-grid .content-div {background-color: var(--reddish-bck);}
+
+.overall-editor-picks-section .section-13-grid .content-div h3,
+.overall-editor-picks-section .section-31-grid .content-div h3,
+.overall-editor-picks-section .section-13-grid .img-div .content-div-inside-img-div h3,
+.overall-editor-picks-section .section-31-grid .img-div .content-div-inside-img-div h3
+{
+    padding-bottom : 0.45rem;
+    font-weight: bold;
+}
+
+
+.overall-editor-picks-section .section-13-grid .img-div img,
+.overall-editor-picks-section .section-31-grid .img-div img
+{
+    width : 50%;
+    padding : 0.6rem;
+}
+
+
+
+
 
 
 /* Styling last section of the index page  */
-
 
 .join{
     background-color: var(--last-section-bck);
@@ -331,12 +366,14 @@ body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;}
 .current-article .div-1{
     background-color : white;
     grid-row: 1/ span 3;
-    padding : 1rem;
+    padding : 0.8rem;
     overflow : auto;
 }
 
 .current-article .div-1 img{
+    display: block;
     width : 100%;
+    margin-top : 0.5rem;
 }
 
 .current-article .div-1 .block-div{
